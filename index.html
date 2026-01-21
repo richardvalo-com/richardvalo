@@ -192,6 +192,41 @@
   }
 }
 
+    /* Responsive basics */
+html { -webkit-text-size-adjust: 100%; }
+img, video { max-width: 100%; height: auto; }
+
+/* Make the 12-col grid collapse nicely */
+@media (max-width: 980px){
+  .grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media (max-width: 700px){
+  .grid { grid-template-columns: repeat(4, 1fr); }
+  h1 { font-size: 40px; }
+  .lead { font-size: 18px; }
+  .sublead { font-size: 14px; }
+  .cta { gap: 10px; }
+  .btn { width: 100%; }       /* buttons stack full width */
+}
+
+/* Nav: make it wrap on small screens */
+@media (max-width: 700px){
+  .nav{ position:static; padding:10px 0 14px; }
+  .links a{ margin-left:12px; }
+  .links{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+}
+
+/* Work cards grid inside Work section */
+@media (max-width: 980px){
+  #work .grid .card { grid-column: span 6 !important; }
+}
+@media (max-width: 700px){
+  #work .grid .card { grid-column: span 12 !important; }
+}
+
+/* Footer already stacks at 700px in our full-width version */
+
   </style>
 </head>
 
