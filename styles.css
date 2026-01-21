@@ -331,7 +331,7 @@ h3{
 .site-footer a{
   color: rgba(4,12,51,.78);
   text-decoration:none;
-  font-weight: 800;
+  font-weight: 600;
 }
 .site-footer a:hover{ color: var(--text); text-decoration: underline; }
 
