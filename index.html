@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>richard valo — Digital Systems & Online Event Producer</title>
 
+  <meta name="description" content="Digital Systems & Online Event Producer. I build reliable workflows with clean data, marketing automation, and KPI visibility." />
+  <meta property="og:title" content="richard valo — Digital Systems & Online Event Producer" />
+  <meta property="og:description" content="Reliable workflows, clean data, marketing automation, KPI visibility. Featured proof: 1,300-participant event funnel." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://richardvalo.pages.dev/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,88 +22,319 @@
       --wood:#546C2C;
       --ath:#ECE4CB;
       --desert:#AC5C1C;
+
+      --text: var(--deep);
+      --muted: rgba(4,12,51,.75);
+      --muted2: rgba(4,12,51,.62);
+      --border: rgba(4,12,51,.12);
+      --border2: rgba(4,12,51,.18);
     }
+
+    *{ box-sizing:border-box; }
     body{
       margin:0;
       font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background:var(--white);
-      color:var(--deep);
+      color:var(--text);
     }
-    .wrap{ max-width:980px; margin:0 auto; padding:48px 20px; }
-    .nav{ display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-bottom:1px solid rgba(4,12,51,.12); }
-    .brand{ font-weight:700; letter-spacing:-.02em; }
-    .links a{ color:rgba(4,12,51,.75); text-decoration:none; margin-left:16px; font-weight:500; }
-    .hero{ padding:56px 0 28px; }
-    h1{ font-size:52px; line-height:1.05; margin:0 0 14px; letter-spacing:-.03em; }
-    .lead{ font-size:19px; line-height:1.5; color:rgba(4,12,51,.75); max-width:64ch; margin:0 0 22px; }
+
+    a{ color:inherit; }
+    .wrap{ max-width:1060px; margin:0 auto; padding:48px 20px 60px; }
+
+    .nav{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:14px 0 18px;
+      border-bottom:1px solid var(--border);
+      position:sticky; top:0;
+      background:rgba(255,255,255,.9);
+      backdrop-filter:saturate(160%) blur(8px);
+    }
+    .brand{
+      font-weight:800;
+      letter-spacing:-.02em;
+      display:flex; align-items:center; gap:10px;
+    }
+    .mark{
+      width:12px; height:12px; border-radius:50%;
+      background:var(--desert);
+      display:inline-block;
+    }
+    .links a{
+      color:var(--muted);
+      text-decoration:none;
+      margin-left:18px;
+      font-weight:600;
+      font-size:14px;
+    }
+    .links a:hover{ color:var(--text); }
+
+    .hero{ padding:54px 0 22px; }
+    h1{
+      font-size:56px;
+      line-height:1.02;
+      margin:0 0 14px;
+      letter-spacing:-.03em;
+    }
+    .lead{
+      font-size:20px;
+      line-height:1.55;
+      color:var(--muted);
+      max-width:70ch;
+      margin:0 0 18px;
+    }
+    .sublead{
+      margin:0 0 22px;
+      color:var(--muted2);
+      font-size:15px;
+      max-width:78ch;
+    }
+
     .cta{ display:flex; gap:12px; flex-wrap:wrap; }
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      height:44px; padding:0 18px; border-radius:14px;
-      font-weight:600; text-decoration:none;
+      height:46px; padding:0 18px;
+      border-radius:14px;
+      font-weight:700;
+      text-decoration:none;
+      font-size:15px;
+      border:1px solid transparent;
     }
     .btn.primary{ background:var(--wood); color:var(--white); }
-    .btn.secondary{ border:1px solid rgba(4,12,51,.35); color:var(--deep); }
-    .card{
-      margin-top:26px; background:var(--ath);
-      border:1px solid rgba(4,12,51,.10); border-radius:16px;
-      padding:18px 18px 16px;
+    .btn.primary:hover{ filter:brightness(0.96); }
+    .btn.secondary{ border-color:rgba(4,12,51,.35); color:var(--text); background:var(--white); }
+    .btn.secondary:hover{ border-color:rgba(4,12,51,.55); }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:16px;
+      margin-top:26px;
     }
-    .card h3{ margin:0 0 10px; font-size:16px; }
-    .dot{ display:inline-block; width:8px; height:8px; background:var(--desert); border-radius:50%; margin-left:6px; }
-    ul{ margin:10px 0 0 18px; color:rgba(4,12,51,.78); }
-    footer{ margin-top:48px; padding-top:18px; border-top:1px solid rgba(4,12,51,.12); color:rgba(4,12,51,.65); font-size:14px; }
+
+    .card{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      background:var(--white);
+    }
+    .card.soft{ background:var(--ath); }
+    .card h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:-.01em;
+    }
+    .kicker{
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:rgba(4,12,51,.55);
+      margin:0 0 8px;
+    }
+    .muted{ color:var(--muted); }
+    .muted2{ color:var(--muted2); }
+
+    ul{ margin:10px 0 0 18px; padding:0; color:var(--muted); }
+    li{ margin:6px 0; }
+
+    .pillrow{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+    .pill{
+      font-size:12px;
+      font-weight:700;
+      border:1px solid rgba(4,12,51,.18);
+      color:rgba(4,12,51,.80);
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.7);
+    }
+
+    .footer{
+      margin-top:52px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+      color:var(--muted2);
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 860px){
+      h1{ font-size:42px; }
+      .lead{ font-size:18px; }
+      .grid{ gap:12px; }
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="nav">
-      <div class="brand">richard valo</div>
+      <div class="brand"><span class="mark"></span> richard valo</div>
       <div class="links">
-        <a href="#work">Work With Me</a>
+        <a href="#work">Work</a>
         <a href="#cases">Case Studies</a>
+        <a href="#stack">Stack</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
 
     <section class="hero">
       <h1>Digital Systems &<br/>Online Event Producer</h1>
-      <p class="lead">I design reliable online workflows that keep data clean, automate delivery, and move outcomes toward KPI.</p>
+
+      <p class="lead">
+        I design reliable online workflows that keep data clean, automate delivery, and move outcomes toward KPI.
+      </p>
+
+      <p class="sublead">
+        Featured proof: automated online presentation event funnel for <strong>1,300 participants</strong> — payments, invoicing, email journeys, unique access links, bundles, tracking, error handling, live promo, and replay delivery.
+      </p>
+
       <div class="cta">
         <a class="btn primary" href="#contact">Book a Call</a>
         <a class="btn secondary" href="#cases">View Case Studies</a>
       </div>
 
-      <div class="card" id="cases">
-        <h3>Featured Proof<span class="dot"></span></h3>
-        <strong>Online event funnel — 1,300 participants</strong>
-        <ul>
-          <li>Automated checkout, invoices, email sequences</li>
-          <li>Unique access links + error handling</li>
-          <li>Ticket bundles + assignment + redemption tracking</li>
-          <li>Live promo + replay sales delivery</li>
-        </ul>
+      <div class="pillrow">
+        <div class="pill">No-Code Development</div>
+        <div class="pill">Marketing Automation</div>
+        <div class="pill">Digital Strategy</div>
+        <div class="pill">Clean Data & Workflow</div>
+        <div class="pill">KPI Visibility</div>
       </div>
     </section>
 
-    <section id="work" class="card" style="background:#fff">
-      <h3>Work With Me</h3>
-      <ul>
-        <li>Event Funnel Build (2–6 weeks)</li>
-        <li>Systems Audit (5–10 days)</li>
-        <li>Retainer / Systems Operator</li>
-      </ul>
-    </section>
+    <div class="grid">
+      <!-- Outcomes -->
+      <div class="card" style="grid-column: span 7;">
+        <div class="kicker">Outcomes</div>
+        <h2>Systems that run smooth — before, during, and after launch</h2>
+        <ul>
+          <li><strong>Event funnel at scale:</strong> registration → access links → reminders → live promo → replay delivery</li>
+          <li><strong>Clean data flow:</strong> single source of truth, tagging discipline, dedupe logic, error handling</li>
+          <li><strong>Revenue automation:</strong> payments, invoices, upsells, bundles, time-limited offers</li>
+          <li><strong>Operational clarity:</strong> ownership map, handover docs, KPI tracking plan</li>
+        </ul>
+      </div>
 
-    <section id="contact" class="card">
-      <h3>Contact</h3>
-      <p style="margin:0;color:rgba(4,12,51,.75)">E-mail: richard.valo@monardevents.com / LinkedIn: https://www.linkedin.com/in/richardvalo/</p>
-    </section>
+      <!-- How I think -->
+      <div class="card soft" style="grid-column: span 5;">
+        <div class="kicker">How I think</div>
+        <h2>Clarity is a system feature</h2>
+        <p class="muted" style="margin:0;">
+          I love when a system starts showing its strength through automation, clean data transfer, and outcomes that point toward KPI.
+        </p>
+        <p class="muted" style="margin:10px 0 0;">
+          I see visual clarity and clean design as a way to support understanding, trust, and long-term usability of systems.
+        </p>
+      </div>
 
-    <footer>
-      © <span id="y"></span> richard valo · Built on Cloudflare Pages
-    </footer>
+      <!-- Featured proof -->
+      <div class="card soft" id="cases" style="grid-column: span 12;">
+        <div class="kicker">Featured proof</div>
+        <h2>Online presentation event funnel — 1,300 participants</h2>
+        <ul>
+          <li>Moderator + 5 speakers</li>
+          <li>Automated checkout, invoicing, email sequences, unique access links</li>
+          <li>Ticket bundles (e.g., 6 seats) with participant assignment, tracking, duplicate protection, and error handling</li>
+          <li>Live promo module: next-event offer + deadline logic (midnight offer)</li>
+          <li>Replay sales with automated delivery</li>
+        </ul>
+      </div>
+
+      <!-- Case studies (coming next) -->
+      <div class="card" style="grid-column: span 6;">
+        <div class="kicker">Case study (next)</div>
+        <h2>Hello Senior — Systems & Automation Leadership</h2>
+        <p class="muted" style="margin:0;">
+          Operational stability, clean data, scalable marketing ops, and reliable delivery workflows.
+        </p>
+        <ul>
+          <li>Workflow ownership + tooling standards</li>
+          <li>Segmentation + lifecycle automation</li>
+          <li>KPI visibility via tagging discipline</li>
+        </ul>
+      </div>
+
+      <div class="card" style="grid-column: span 6;">
+        <div class="kicker">Case study (next)</div>
+        <h2>Sales Gates — Web → Email → Orders Ecosystem</h2>
+        <p class="muted" style="margin:0;">
+          A client-ready digital ecosystem that converts and delivers without manual friction.
+        </p>
+        <ul>
+          <li>Offer clarity + conversion pages</li>
+          <li>Payment + invoice + delivery automation</li>
+          <li>Clean contact base + segmentation</li>
+        </ul>
+      </div>
+
+      <!-- Work With Me -->
+      <div class="card" id="work" style="grid-column: span 12;">
+        <div class="kicker">Work with me</div>
+        <h2>Three ways we can work together</h2>
+        <div class="grid" style="margin-top:14px;">
+          <div class="card soft" style="grid-column: span 4; border-color: rgba(4,12,51,.10);">
+            <h2 style="margin:0 0 8px; font-size:16px;">Event Funnel Build</h2>
+            <p class="muted" style="margin:0;">Design + build + launch support for a KPI-tracked event system.</p>
+          </div>
+          <div class="card soft" style="grid-column: span 4; border-color: rgba(4,12,51,.10);">
+            <h2 style="margin:0 0 8px; font-size:16px;">Systems Audit</h2>
+            <p class="muted" style="margin:0;">Map workflows, data structure, failure points, and quick wins.</p>
+          </div>
+          <div class="card soft" style="grid-column: span 4; border-color: rgba(4,12,51,.10);">
+            <h2 style="margin:0 0 8px; font-size:16px;">Retainer / Operator</h2>
+            <p class="muted" style="margin:0;">Ongoing improvements, monitoring, and iteration cycles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stack -->
+      <div class="card" id="stack" style="grid-column: span 12;">
+        <div class="kicker">Typical stack</div>
+        <h2>Tools I often work with</h2>
+        <div class="pillrow" style="margin-top:10px;">
+          <div class="pill">Make / Zapier</div>
+          <div class="pill">SmartEmailing</div>
+          <div class="pill">Stripe / GoPay</div>
+          <div class="pill">Cloudflare Pages</div>
+          <div class="pill">CMS (WordPress)</div>
+          <div class="pill">GA4 / GTM</div>
+          <div class="pill">Webinar / Livestream platforms</div>
+        </div>
+        <p class="muted2" style="margin:12px 0 0;">
+          I focus on reliability, clean data structure, and a corporate-clean output that supports trust and long-term usability.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="card soft" id="contact" style="grid-column: span 12;">
+        <div class="kicker">Contact</div>
+        <h2>Let’s talk through your workflow</h2>
+        <p class="muted" style="margin:0 0 12px;">
+          Send your goal, stack, timeline, and KPI. I’ll reply with next steps.
+        </p>
+
+        <div class="cta">
+          <!-- Replace placeholders below -->
+          <a class="btn primary" href="mailto:richard.valo@monardevents.com?subject=Digital%20Systems%20Call">Email</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/richardvalo/" target="_blank" rel="noopener">LinkedIn</a
+        </div>
+
+        <p class="muted2" style="margin:12px 0 0;font-size:14px;">
+          If booking isn’t set yet, keep Email + LinkedIn and add booking later.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> richard valo</div>
+      <div>Built on Cloudflare Pages · <a href="#contact" style="color:rgba(4,12,51,.75);">Contact</a></div>
+    </div>
   </div>
+
   <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
 </body>
 </html>
