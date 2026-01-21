@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>richard valo — Digital Systems & Online Event Producer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --white:#FFFFFF;
+      --deep:#040C33;
+      --wood:#546C2C;
+      --ath:#ECE4CB;
+      --desert:#AC5C1C;
+    }
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--white);
+      color:var(--deep);
+    }
+    .wrap{ max-width:980px; margin:0 auto; padding:48px 20px; }
+    .nav{ display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-bottom:1px solid rgba(4,12,51,.12); }
+    .brand{ font-weight:700; letter-spacing:-.02em; }
+    .links a{ color:rgba(4,12,51,.75); text-decoration:none; margin-left:16px; font-weight:500; }
+    .hero{ padding:56px 0 28px; }
+    h1{ font-size:52px; line-height:1.05; margin:0 0 14px; letter-spacing:-.03em; }
+    .lead{ font-size:19px; line-height:1.5; color:rgba(4,12,51,.75); max-width:64ch; margin:0 0 22px; }
+    .cta{ display:flex; gap:12px; flex-wrap:wrap; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      height:44px; padding:0 18px; border-radius:14px;
+      font-weight:600; text-decoration:none;
+    }
+    .btn.primary{ background:var(--wood); color:var(--white); }
+    .btn.secondary{ border:1px solid rgba(4,12,51,.35); color:var(--deep); }
+    .card{
+      margin-top:26px; background:var(--ath);
+      border:1px solid rgba(4,12,51,.10); border-radius:16px;
+      padding:18px 18px 16px;
+    }
+    .card h3{ margin:0 0 10px; font-size:16px; }
+    .dot{ display:inline-block; width:8px; height:8px; background:var(--desert); border-radius:50%; margin-left:6px; }
+    ul{ margin:10px 0 0 18px; color:rgba(4,12,51,.78); }
+    footer{ margin-top:48px; padding-top:18px; border-top:1px solid rgba(4,12,51,.12); color:rgba(4,12,51,.65); font-size:14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">richard valo</div>
+      <div class="links">
+        <a href="#work">Work With Me</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1>Digital Systems &<br/>Online Event Producer</h1>
+      <p class="lead">I design reliable online workflows that keep data clean, automate delivery, and move outcomes toward KPI.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Book a Call</a>
+        <a class="btn secondary" href="#cases">View Case Studies</a>
+      </div>
+
+      <div class="card" id="cases">
+        <h3>Featured Proof<span class="dot"></span></h3>
+        <strong>Online event funnel — 1,300 participants</strong>
+        <ul>
+          <li>Automated checkout, invoices, email sequences</li>
+          <li>Unique access links + error handling</li>
+          <li>Ticket bundles + assignment + redemption tracking</li>
+          <li>Live promo + replay sales delivery</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work" class="card" style="background:#fff">
+      <h3>Work With Me</h3>
+      <ul>
+        <li>Event Funnel Build (2–6 weeks)</li>
+        <li>Systems Audit (5–10 days)</li>
+        <li>Retainer / Systems Operator</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>Contact</h3>
+      <p style="margin:0;color:rgba(4,12,51,.75)">Add your email / LinkedIn here. For now, this is a placeholder section.</p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> richard valo · Built on Cloudflare Pages
+    </footer>
+  </div>
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
