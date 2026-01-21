@@ -150,16 +150,28 @@
     }
 
     .footer{
-      margin-top:52px;
-      padding-top:18px;
-      border-top:1px solid var(--border);
-      color:var(--muted2);
-      font-size:14px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
+  margin-top:52px;
+  padding-top:18px;
+  border-top:1px solid var(--border);
+  color:var(--muted2);
+  font-size:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.footer a{
+  color:rgba(4,12,51,.78);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.footer a:hover{
+  color:var(--text);
+  text-decoration:underline;
+}
 
     @media (max-width: 860px){
       h1{ font-size:42px; }
@@ -329,11 +341,18 @@
       </div>
     </div>
 
-    <div class="footer">
-      <div>© <span id="y"></span> richard valo</div>
-      <div>Built on Cloudflare Pages · <a href="#contact" style="color:rgba(4,12,51,.75);">Contact</a></div>
-    </div>
+  <footer class="footer" role="contentinfo">
+  <div>© <span id="y"></span> richard valo</div>
+  <div>
+    <a href="#contact">Contact</a>
+    <span aria-hidden="true"> · </span>
+    <a href="#cases">Case Studies</a>
+    <span aria-hidden="true"> · </span>
+    <a href="#work">Work</a>
+    <a href="https://www.linkedin.com/in/richardvalo/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
+</footer>
+
 
   <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
 </body>
