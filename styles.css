@@ -277,12 +277,12 @@ h3{
 
 /* Home hero spacing (prevents "sticking" to the next section) */
 .split-hero{
-  padding-bottom: 26px;
+  padding-bottom: 36px;
 }
 
 @media (min-width: 720px){
   .split-hero{
-    padding-bottom: 34px;
+    padding-bottom: 44px;
   }
 }
 
