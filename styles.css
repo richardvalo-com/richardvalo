@@ -275,14 +275,14 @@ h3{
   gap: 14px;
 }
 
-/* Home hero block spacing */
-.hero-split {
-  padding-bottom: 22px;   /* pridá dýchanie */
+/* Home hero spacing (prevents "sticking" to the next section) */
+.split-hero{
+  padding-bottom: 26px;
 }
 
-@media (min-width: 980px){
-  .hero-split {
-    padding-bottom: 34px; /* na desktope ešte viac */
+@media (min-width: 720px){
+  .split-hero{
+    padding-bottom: 34px;
   }
 }
 
