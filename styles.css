@@ -275,6 +275,17 @@ h3{
   gap: 14px;
 }
 
+/* Home hero block spacing */
+.hero-split {
+  padding-bottom: 22px;   /* pridá dýchanie */
+}
+
+@media (min-width: 980px){
+  .hero-split {
+    padding-bottom: 34px; /* na desktope ešte viac */
+  }
+}
+
 /* Case study helpers */
 .meta{
   display:flex;
